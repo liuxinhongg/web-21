@@ -16,6 +16,7 @@
 	console.log(a);
 }
 /* {
+	
 	!(function(){
 		console.log(b);
 		let b = 10;
