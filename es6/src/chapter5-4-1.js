@@ -9,4 +9,5 @@ console.log(test.a)
 console.log(test.Test)
 console.log(test.sayhello) */
 import aa from "./chapter5-4-2.js"
-console.log(aa);
+console.log(aa);//{a:10}
+console.log(aa.a)
