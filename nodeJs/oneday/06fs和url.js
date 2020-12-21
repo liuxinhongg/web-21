@@ -23,6 +23,30 @@ let server = http.createServer((req,res)=>{
 			}
 			res.end(data)
 		})
+	}else if(req.url==="/img"){
+		fs.readFile("./one.jpg",(err,data)=>{
+			if(err){
+				console.log("读取文件失败");
+				return;
+			}
+			res.end(data)
+		})
+	}else if(req.url==="/css"){
+		fs.readFile("./fs.css",(err,data)=>{
+			if(err){
+				console.log("读取文件失败");
+				return;
+			}
+			res.end(data)
+		})
+	}else if(req.url==="/html"){
+		fs.readFile("./fs.html",(err,data)=>{
+			if(err){
+				console.log("读取文件失败");
+				return;
+			}
+			res.end(data)
+		})
 	}
 	
 })
