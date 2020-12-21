@@ -65,3 +65,12 @@
 	}
 	fun("我是谁？","我在那")
 }
+{
+	let obj = {
+		name :"zhangsan",
+		age:18,
+		say:()=>{
+			console.log(this)
+		}
+	}
+}

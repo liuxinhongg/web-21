@@ -11,7 +11,6 @@
  async function fun1(){
  	await console.log(1)
  } */
-
 }{
 	var fn1 = async function fn1() {
 		await console.log(1);

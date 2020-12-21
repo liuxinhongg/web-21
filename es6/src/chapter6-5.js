@@ -9,14 +9,13 @@
 	async function fun1(){
 		await console.log(1)
 	} */
-
 } {
 	async function fn1() {
 		await console.log(1);
 		await console.log(2);
 		await console.log(3);
 	}
-	fn1()
+	fn1();
 } {
 	function fn1() {
 		setTimeout(() => {
