@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<form>
+			<p>
+				用户名：<input type="text" value=""  id="aa"/>
+			</p>
+			<p>
+				密码：<input type="text" value="" id="bb"/>
+			</p>
+			<p>
+				邮箱：<input type="text" value="" id="cc"/>
+			</p>
+			<p>
+				电话：<input type="text" value=""  id="dd"/>
+			</p>
+			
+			<p>
+				昵称：<input type="text" value="" id="ee"/>
+			</p>
+			<input type="button" value="提交" id="btn"/>
+		</form>
+		<script type="text/javascript">
+			$("#btn").click(function(){
+				$.ajax({
+					url:"http://localhost:3000/insert",
+					data:{
+						username:$("#aa").val(),
+						password:$("#bb").val(),
+						email:$("#cc").val(),
+						phone:$("#dd").val(),
+						nick:$("#ee").val(),
+					},
+					success:function(res){
+						// console.log(JSON.parse(res))
+						console.log(res)
+						// $("style").append(res)
+					}
+				})
+			})
+			
+		</script> 
+	</body>
+</html>
