@@ -1,0 +1,4 @@
+.DS_Store
+./oneday/node_modules/
+./twoday/node_modules/
+npm-debug.log
