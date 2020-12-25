@@ -3,13 +3,30 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<form action="/userinfo" method="get">
+		<!-- <form action="/userinfo" method="get"> -->
 			<p>
-				用户名：<input type="text" name="username" id="" value="" />
+				用户名：<input type="text" name="username" id="username" value="" />
 			</p>
-			<input type="submit" value="查询"/>
-		</form>
+			<input type="button" value="查询" id="btn"/>
+		<!-- </form> -->
+		<script type="text/javascript">
+			// username:decodeURIComponent($("#username").val())
+			$("#btn").click(function(){
+				$.ajax({
+					url:"http://localhost:3000/userinfo",
+					type:"get",
+					data:{
+						username:$("#username").val()
+					},
+					success:res=>{
+						console.log(res);
+						
+					}
+				})
+			})
+		</script>
 	</body>
 </html>

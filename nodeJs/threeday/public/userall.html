@@ -57,26 +57,30 @@
 		</div>
 		<script type="text/javascript">
 			$("#box").hide()
-			$.ajax({
-				url:"http://localhost:3000/allsearch",
-				success:res=>{
-					console.log(res);
-					res.data.forEach(item=>{
-						$("#tr1").after(
-						`
-						<tr id="tr2">
-							<td>${item.id}</td>
-							<td>${item.username}</td>
-							<td>${item.email}</td>
-							<td>${item.phone}</td>
-							<td>${item.nick}</td>
-							<td onclick="btn(${item.id})">编辑</td>
-						</tr>
-						`
-						)
-					})
-				}
-			})
+			data();
+			function data(){
+				$.ajax({
+					url:"http://localhost:3000/allsearch",
+					success:res=>{
+						console.log(res);
+						res.data.forEach(item=>{
+							$("#tr1").after(
+							`
+								<tr id="tr2">
+									<td>${item.id}</td>
+									<td>${item.username}</td>
+									<td>${item.email}</td>
+									<td>${item.phone}</td>
+									<td>${item.nick}</td>
+									<td onclick="btn(${item.id})">编辑</td>
+								</tr>
+							`
+							)
+						})
+					}
+				})
+			}
+			
 			var id;
 			function btn(val){
 				id = val;
@@ -108,6 +112,11 @@
 					},
 					success:res=>{
 						console.log(res)
+						if(res.code === 1){
+							alert("更新成功");
+							data();
+							$("#box").hide()
+						}
 					}
 				})
 			})
