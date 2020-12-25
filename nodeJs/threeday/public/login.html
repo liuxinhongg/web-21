@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>登录页面</h1>
+		<form action="/login" method="post">
+			<p>
+				用户名：<input type="text" value=""  id="aa" name="username"/>
+			</p>
+			<p>
+				密码：<input type="text" value="" id="bb" name="password"/>
+			</p>
+			<input type="submit" value="登录"/>
+			<input type="button" value="登录" id="btn"/>
+		</form>
+		<script type="text/javascript">
+			$("#btn").click(function(){
+				$.ajax({
+					url:"http://localhost:3000/login",
+					type:"post",
+					data:{
+						username:$("#aa").val(),
+						password:$("#bb").val()
+					},
+					success:function(res){
+						console.log(res);
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
