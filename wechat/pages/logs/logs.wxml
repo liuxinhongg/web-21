@@ -1,0 +1,2 @@
+<import src="../person/person" />
+<template is="msgItem" data="{{...item}}"/>

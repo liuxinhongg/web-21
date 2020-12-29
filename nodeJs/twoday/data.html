@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			ul li{
+				margin: 20px 0px;
+				padding: 20px;
+				line-height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<!-- <li>
+				<h2> <font color="red"></font> </h2>
+				<h2> <font color="yellowgreen"></font> </h2>
+			</li> -->
+		</ul>
+		<script type="text/javascript">
+			$.ajax({
+				url:'http://localhost:3000/',
+				success:function(res){
+					let datalist = JSON.parse(res).showapi_res_body.data;
+					console.log(datalist);
+					datalist.forEach((item)=>{
+						$("ul").append(`
+							<li>
+								<h2> <font color="red">${item.chinese}</font> </h2>
+								<h2> <font color="yellowgreen">${item.english}</font> </h2>
+							</li>
+						`)
+					})
+				}
+			})
+		</script>
+	</body>
+</html>

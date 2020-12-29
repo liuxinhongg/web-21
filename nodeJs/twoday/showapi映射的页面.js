@@ -7,8 +7,9 @@ let datalist = {};
 
 var server = http.createServer((req,res)=>{
 	res.setHeader("content-type","text/html;charset=utf-8");
+	res.setHeader("Access-Control-Allow-Origin","*");//解决跨域
 	if(datalist){
-		console.log(datalist)
+		// console.log(datalist)
 		res.end(JSON.stringify(datalist) )
 	}
 })

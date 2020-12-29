@@ -51,5 +51,7 @@ router.get("/findid",(req,res,next)=>{
 		})
 	})
 })
+
+
 router.get("/updata",cbfile.userUpdata)
 module.exports = router;

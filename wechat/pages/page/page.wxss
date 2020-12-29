@@ -1,0 +1,16 @@
+/* pages/page/page.wxss */
+.box{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #f99;
+  /* visibility: hidden;
+  display: none; */
+}
+.title,.time{
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  /* text-indent: 1rem; */
+  letter-spacing: 0.3rem;
+  color: red;
+}

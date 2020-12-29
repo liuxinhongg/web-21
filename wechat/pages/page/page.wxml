@@ -1,0 +1,26 @@
+<!--pages/page/page.wxml-->
+<!-- <text>pages/page/page.wxml</text> -->
+<!-- <p>{{msg}}</p>
+<p>{{msg}}</p> -->
+<view>{{msg}}</view>
+<view>{{msg}}</view>
+<!-- <view class="box"></view> -->
+<view>
+  <view wx:for="{{pome}}" wx:key="index">
+    <text>{{index}}</text>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+<view>
+  <view wx:for="{{Poetry}}" wx:for-index="id" wx:for-item="po" wx:key="id">
+    <text>{{id}}</text>
+    <text>{{po.name}}</text>
+  </view>
+</view>
+<view class="box" wx:if="{{seen}}"></view>
+<view wx:else>我是谁？我在哪？</view>
+<view wx:if="{{num>100}}">大于100</view>
+<view wx:elif="{{num<100}}">小于100</view>
+<view wx:else>等于100</view>
+<import src="../person/person" />
+<template is="msgItem" data="{{...item}}"/>

@@ -1,0 +1,7 @@
+<template name="msgItem">
+  <view>
+    <text class="title">标题： {{index}}: {{msg}} </text>
+    <text class="time"> 时间是: {{time}} </text>
+  </view>
+</template>
+<view></view>

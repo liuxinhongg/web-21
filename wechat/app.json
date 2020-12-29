@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/page/page",
+    "pages/logs/logs",
+    "pages/person/person",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f0f",
+    "navigationBarTitleText": "京东",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#333",
+    "selectedColor":"#d81e06",
+    "backgroundColor":"#efefef",
+    "list":[
+      {
+        "pagePath":"pages/page/page",
+        "text":"首页",
+        "iconPath":"./image/index.png",
+        "selectedIconPath":"./image/index-archive.png"
+      },
+      {
+        "pagePath":"pages/logs/logs",
+        "text":"日志",
+        "iconPath":"./image/log.png",
+        "selectedIconPath":"./image/log-archive.png"
+      },
+      {
+        "pagePath":"pages/person/person",
+        "text":"个人中心",
+        "iconPath":"./image/person.png",
+        "selectedIconPath":"./image/person-archive.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -6,7 +6,8 @@ const server = http.createServer((req,res)=>{
 	res.setHeader("Access-Control-Allow-Origin","*");//解决跨域
 	let aa = url.parse(req.url,true).query;
 	console.log(aa);
-	// res.end(1)
+		 
+		 // res.end(1)
 	let sqladd = `insert into user(username,password,email,phone,nick) values (?,?,?,?,?)`;
 	let sqlparams = [aa.username,aa.password,aa.email,aa.phone,aa.nick];
 	my.query(sqladd,sqlparams,(result)=>{

@@ -1,0 +1,8 @@
+/* pages/person/person.wxss */
+.title,.time{
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-indent: 0.5rem;
+  color: red;
+}
