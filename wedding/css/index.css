@@ -1,0 +1,266 @@
+ /*导航播放器*/
+ 
+ .up-arrow {
+ 	position: absolute;
+ 	bottom: 1.25rem;
+ 	left: 0;
+ 	right: 0;
+ 	width: 1.875rem;
+ 	margin: 0 auto;
+ 	z-index: 11;
+ }
+ 
+ .up-arrow img {
+ 	width: 100%;
+ 	animation: upArrow 1.5s ease-in-out infinite;
+ }
+ 
+ @keyframes music {
+ 	to {
+ 		transform: rotate(360deg);
+ 	}
+ }
+ 
+ @-webkit-keyframes music {
+ 	to {
+ 		transform: rotate(360deg);
+ 	}
+ }
+ 
+ .btn-music-on {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	background: url(../img/music_off_8d94020.png) 50% 50% no-repeat;
+ 	z-index: 9999;
+ 	animation: music 3s linear infinite;
+ }
+ 
+ .btn-music-off {
+ 	background: url(../img/music_off_8d94020.png) 50% 50% no-repeat;
+ }
+ /*第二张*/
+ 
+ .second-bgc {
+ 	width: 100%;
+ 	height: 100%;
+ 	position: absolute;
+ }
+ 
+ .swiper-slide img {
+ 	width: 100%;
+ 	height: 100%;
+ }
+ 
+ .swiper-slide:nth-child(2),
+ .swiper-slide:nth-child(3),
+ .swiper-slide:nth-child(5){
+ 	background-color: #061E3E;
+ }
+ 
+ .invitation {
+ 	position: absolute;
+ 	left: 5%;
+ 	top: 40%;
+ 	width: 6.875rem;
+ }
+ 
+ .invitation-txt {
+ 	color: white;
+ 	position: absolute;
+ 	top: 45%;
+ 	left: 15%;
+ 	font-size: 1.4375rem;
+ }
+ 
+ .mologulue {
+ 	list-style: none;
+ 	position: absolute;
+ 	top: 56%;
+ 	left: 5%;
+ }
+ 
+ .mologulue li {
+ 	color: rgb(255, 255, 255);
+ 	line-height: 1.5rem;
+ 	font-size: 0.875rem;
+ }
+ 
+ .second-line {
+ 	width: 12.5rem;
+ 	height: 4.375rem;
+ 	position: absolute;
+ 	bottom: 10%;
+ 	left: 8%;
+ 	color: white;
+ 	line-height: 1.5625rem;
+ 	font-size: 0.875rem;
+ }
+ 
+ .line-time {
+ 	height: 1.5625rem;
+ 	border: 1px dashed #C0C0C0;
+ 	margin-bottom: 0.625rem;
+ 	border-radius: 2px;
+ }
+ 
+ .line-address {
+ 	height: 1.5625rem;
+ 	border: 1px dashed #C0C0C0;
+ 	border-radius: 2px;
+ }
+ /*第三张*/
+ 
+ .wedding-flow {
+ 	color: white;
+ 	line-height:8.125rem;
+ }
+ .third-flower{
+ 	width:100%;
+ 	height:50%;
+ 	position: absolute;
+ 	top: 0;
+ }
+ .wedding-flow h1{text-align: center;}
+ .timetable-all {
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 13%;
+ 	width: 76%;
+ 	height: 25%;
+ }
+ 
+ .time-table {
+ 	width: 16.25rem;
+ 	height: 1.875rem;
+ 	margin-top: 0.875rem;
+ }
+ 
+ .timetable-txt {
+ 	position: absolute;
+ 	top: 51%;
+ 	left: 14%;
+ 	width: 76%;
+ 	height: 35%;
+ 	/*background-color: salmon;*/
+ }
+ 
+ .third-txt {
+ 	width: 16.25rem;
+ 	height: 1.875rem;
+ 	color: white;
+ 	margin-bottom: 0.8125rem;
+ 	line-height: 2.8rem;
+ }
+ 
+ .third-txt span {
+ 	float: left;
+ 	font-size: 1.125rem;
+ }
+ 
+ .third-heart {
+ 	width: 3.125rem;
+ 	height: 1.25rem;
+ 	float: left;
+ 	margin: 0 0.3rem 0 0.3rem;
+ }
+ /*第五张*/
+ 
+ .fifth-flower {
+ 	width: 90%;
+ 	height:44%;
+ 	margin-top: 1.25rem;
+ }
+ 
+ .fifth-treel {
+ 	position: absolute;
+ 	bottom: 0;
+ 	left: 0;
+ 	width: 4.0625rem;
+ 	height: 5.3125rem;
+ }
+ 
+ .fifth-treer {
+ 	position: absolute;
+ 	bottom: 0;
+ 	right: 0;
+ 	width: 4.9375rem;
+ 	height: 5.3125rem;
+ }
+ 
+ .fifth-floreto {
+ 	width: 1.5625rem;
+ 	height: 1.4325rem;
+ 	position: absolute;
+ 	top: 60%;
+ 	left: 10%;
+ 	animation: floret 3s infinite;
+ }
+ 
+ @-webkit-keyframes floret {
+ 	to {
+ 		transform: rotate(360deg);
+ 	}
+ }
+ 
+ .fifth-florett {
+ 	width: 2.3125rem;
+ 	height: 2.3125rem;
+ 	position: absolute;
+ 	bottom: 20%;
+ 	right: 5%;
+ 	animation: floret 3s infinite;
+ }
+ 
+ .fifth-florettr {
+ 	width: 2.3125rem;
+ 	height: 2.3125rem;
+ 	position: absolute;
+ 	bottom: 50%;
+ 	left: 5%;
+ }
+ 
+ .fifth-bottle {
+ 	position: absolute;
+ 	left: 20%;
+ 	top: 28%;
+ 	width: 55%;
+ 	height: 52%;
+ }
+ 
+ .fifth-txt {
+ 	width: 55%;
+ 	height: 30%;
+ 	position: absolute;
+ 	top: 45%;
+ 	left: 20%;
+ }
+ 
+ .fifth-txt p {
+ 	color: white;
+ 	font-size: 1.7rem;
+ 	text-align: center;
+ 	margin: -10% 0 5% 0;
+ }
+ 
+ .fifth-all {
+ 	background-color: rgba(0, 0, 0, 0);
+ 	width:85%;
+ 	height: 2rem;
+ 	border: 1px solid #e9547c;
+ 	border-radius: 4px;
+ 	font-size: 1.2rem;
+ 	margin:3% 3% 3% 8%;
+ 	text-indent: 20px;
+ }
+ 
+ .fifth-alone {
+ 	background-color: #e9547c;
+ 	width:85%;
+ 	height: 2rem;
+ 	border: none;
+ 	border-radius: 4px;
+ 	font-size: 1.2rem;
+ 	margin-left:8%;
+ 	color: white;
+ }

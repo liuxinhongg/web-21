@@ -1,0 +1,156 @@
+/*第一个*/
+
+.swiper-slide .background-0 {
+	width: 100%;
+	height: 100%;
+	z-index: -1px;
+}
+
+.swiper-slide .xr {
+	width: 30%;
+	height: 22%;
+	position: absolute;
+	top: 59.6%;
+	left: 34%;
+}
+
+.swiper-slide .background-0 .background0 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.swiper-slide .background-0 .background1 {
+	/*display: block;*/
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 10%;
+}
+
+.swiper-slide .background-0 .background2 {
+	width: 60%;
+	height: 15%;
+	position: absolute;
+	top: 3%;
+	left: 20%;
+}
+
+.swiper-slide .background-0 .background3 {
+	width: 64%;
+	height: 23%;
+	position: absolute;
+	top: 19%;
+	left: 17.5%;
+}
+
+.swiper-slide .background-0 .background4 {
+	width: 26%;
+	height: 5%;
+	position: absolute;
+	top: 45%;
+	left: 36%;
+}
+
+.swiper-slide .background-0 .sehisehi {
+	width: 50%;
+	height: 5%;
+	/*background-color: darkcyan;*/
+	position: absolute;
+	top: 52%;
+	left: 25%;
+	font-size: 1rem;
+	line-height: 2rem;
+	text-align: center;
+	color: white;
+}
+
+.swiper-slide .background-0 .background5 {
+	width: 60%;
+	height: 7%;
+	position: absolute;
+	top: 75%;
+	left: 20%;
+}
+
+.swiper-slide .background-0 .sehisehi1 {
+	width: 50%;
+	height: 5%;
+	/*background-color: darkcyan;*/
+	position: absolute;
+	top: 85%;
+	left: 25%;
+	font-size: 1rem;
+	line-height: 2rem;
+	text-align: center;
+	color: white;
+	border-bottom: 1px dashed white;
+}
+
+
+/*第四个*/
+
+.swiper-slide .wedding-0 {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide .wedding-0 .wedding1 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.swiper-slide .wedding-0 .wedding2 {
+	position: absolute;
+	top: 8%;
+	left: 26%;
+	width: 50%;
+	height: 28%;
+}
+
+.swiper-slide .wedding-0 .wedding_2 {
+	position: absolute;
+	top: 2%;
+	left: 16%;
+	width: 68%;
+	height: 31%;
+}
+
+.swiper-slide .wedding-0 .wedding3 {
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	width: 40%;
+	height: 16%;
+}
+
+.swiper-slide .wedding-0 .lianr {
+	position: absolute;
+	top: 48.5%;
+	left: 25%;
+	width: 50%;
+	height: 5%;
+	/*background-color: darkgreen;*/
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+}
+
+.swiper-slide .wedding-0 .wedding4 {
+	position: absolute;
+	top: 65%;
+	left: 12%;
+	width: 38%;
+	height: 26%;
+}
+
+.swiper-slide .wedding-0 .wedding5 {
+	position: absolute;
+	top: 65%;
+	left: 52%;
+	width: 38%;
+	height: 26%;
+}
