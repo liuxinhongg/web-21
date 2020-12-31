@@ -14,3 +14,16 @@
   letter-spacing: 0.3rem;
   color: red;
 }
+movable-area{
+  width: 400rpx;
+  height: 400rpx;
+  background-color: #efefef;
+}
+movable-view{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: green;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+}

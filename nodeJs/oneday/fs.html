@@ -5,11 +5,20 @@
 		<title></title>
 		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- <link rel="stylesheet" type="text/css" href="http://192.168.1.103:3000/css"/> -->
-		<style type="text/css"></style>
+		<style type="text/css">
+			.oInput{
+				color: red;
+			}
+			.oInput::-webkit-input-placeholder{
+				color: #00B7FF;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>今天是周一，真好~</h1>
 		<p>今天是周一，真好~</p>
+		<marquee direction="down" width="500" height="500" bgcolor="red" behavior="slide" scrollamount="20">我是弹幕</marquee>
+		<input type="text" name="" id="" value="" placeholder="请输入用户名" class="oInput"/>
 		<!----> 
 		<script type="text/javascript">
 			$.ajax({

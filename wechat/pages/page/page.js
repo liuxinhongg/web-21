@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    x:0,
+    y:0,
     name:'',
     age:19,
     num:100,
@@ -26,9 +28,34 @@ Page({
       index: 0,
       msg: '我是一个模板',
       time: '2016-09-15'
-    }
+    },
+    content:`<div> <h1>在富文本中显示</h1> </div>`
   },
-
+  btnOne(e){
+    console.log(e.detail.value);
+  },
+  jump(){
+    // wx.navigateTo({
+    //   url:"../index/index?name=wanggang"
+    // })
+    wx.switchTab({
+      url:'../logs/logs'
+    })
+  },
+  getdata(e){
+    console.log(e)
+    console.log(e.currentTarget.dataset.name)
+    console.log(e.currentTarget.dataset.id)
+  },
+  btn(){
+    // this.data.x = 30
+    // this.data.y = 30;
+    this.setData({
+      x : 30,
+      y : 30
+    })
+    console.log(this);
+  },
   /**
    * 生命周期函数--监听页面加载
    */

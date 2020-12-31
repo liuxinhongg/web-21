@@ -5,3 +5,4 @@
   </view>
 </template>
 <view></view>
+<canvas canvas-id="canvas" style="width:600rpx;height:400rpx;border:1px solid #000;margin:10px auto;"></canvas>

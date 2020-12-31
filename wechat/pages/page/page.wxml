@@ -22,5 +22,37 @@
 <view wx:if="{{num>100}}">大于100</view>
 <view wx:elif="{{num<100}}">小于100</view>
 <view wx:else>等于100</view>
+<movable-area>
+  <movable-view x="{{x}}" y="{{y}}" direction="all">text</movable-view>
+</movable-area>
+<button class="mini-btn" type="primary" size="mini" catchtap="btn">按钮</button>
+<icon class="icon-box-img" type="clear" size="30" color="#f0f"></icon>
+<progress percent="60" show-info stroke-width="10" border-radius="5" activeColor="pink" backgroundColor="deeppink" active="true" duration="500"  font-size="14"/>
+<rich-text nodes="{{content}}"></rich-text>
+<input class="weui-input" bindblur="btnOne" bindfocus="jump" placeholder="输入同步到view中"/>
+<navigator url="../index/index?name=zhangsan">我要去index页面</navigator>
+<navigator url="../logs/logs?name=lisi" open-type="switchTab">我要去日志导航[switchTab]</navigator>
+<navigator url="../sort/sort" open-type="reLaunch">我要去日志导航[reLaunch]</navigator>
+
+<view class="aa" data-name="张三" data-id="0" bindtap="getdata">今天周三~</view>
+<!-- <video src="https://www.w3school.com.cn/i/movie.ogg" controls></video> -->
+<audio id="1" src="../../image/赤伶.mp3" loop controls="true" poster="../../image/banner/img1.png" name="赤伶" author="周宇哲"></audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <import src="../person/person" />
 <template is="msgItem" data="{{...item}}"/>

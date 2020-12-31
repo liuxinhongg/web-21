@@ -38,7 +38,7 @@
   </scroll-view>
 </view>
 
-
+<map longitude="{{longitude}}" latitude="{{latitude}}" scale="14" markers="{{markers}}" show-location="true" style="width:100%;height:600rpx"></map>
 
 <!-- <import src="../person/person" />
 <template is="msgItem" data="{{...item}}"/> -->
