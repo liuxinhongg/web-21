@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    username:"zhouyuzhe"
+    username:"zhouyuzhe",
+    name:''
   }
 })

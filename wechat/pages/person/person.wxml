@@ -6,3 +6,12 @@
 </template>
 <view></view>
 <canvas canvas-id="canvas" style="width:600rpx;height:400rpx;border:1px solid #000;margin:10px auto;"></canvas>
+<!-- <canvas canvas-id="aa" type="2d" style="width:400rpx;height:400rpx;background:pink;">  </canvas> -->
+<scroll-view class="scroll-view_H" scroll-x="true">
+  <view class="scroll" style="width:{{kuan}}rpx"  >
+    <view wx:for="{{navList}}" class="itemBox {{ name == item.name ? 'active' : '' }}" wx:key="index" data-name="{{item.name}}" bindtap="jumpPage">
+      <image src="{{item.img}}"></image>
+      <view class="title">{{item.name}}</view>
+    </view>
+  </view>
+</scroll-view>

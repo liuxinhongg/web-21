@@ -1,18 +1,44 @@
 // pages/person/person.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navList:[],
+    kuan:850,
+    name:''
   },
+  jumpPage(e){
+    console.log(e.currentTarget.dataset)
+    this.setData({
+      name:e.currentTarget.dataset.name
+    })
+      // app.globalData.name=e.currentTarget.dataset.name
+      wx.setStorage({
+        data: e.currentTarget.dataset.name,
+        key: 'info',
+      })
 
+    wx.switchTab({
+      url: '../logs/logs',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://192.168.1.103:3000/goods/sortOne',
+      method:'GET',
+      success:(res)=>{
+        console.log(res)
+        this.setData({
+          navList:res.data.data
+        })
+      }
+    })
   },
 
   /**
@@ -21,7 +47,7 @@ Page({
   onReady: function () {
     let context = wx.createCanvasContext('canvas');
     // context.setStrokeStyle("red");
-    context.setStrokeStyle('red')
+    context.setStrokeStyle('#f00')
     context.setLineWidth(5)
     // context.fillRect(20,20,150,75);
     // 头
@@ -38,6 +64,7 @@ Page({
 
     context.stroke()
     context.draw()
+
   },
 
   /**

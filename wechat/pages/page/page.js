@@ -68,7 +68,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    let aa = wx.createCanvasContext('aa');
+    aa.setStrokeStyle('red')
+    aa.setLineWidth(5)
+    aa.moveTo(85,80);
+    aa.arc(80,80,5,0,2*Math.PI,false)
+    aa.stroke()
+    aa.draw()
   },
 
   /**

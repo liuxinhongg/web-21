@@ -36,7 +36,9 @@
 
 <view class="aa" data-name="张三" data-id="0" bindtap="getdata">今天周三~</view>
 <!-- <video src="https://www.w3school.com.cn/i/movie.ogg" controls></video> -->
-<audio id="1" src="../../image/赤伶.mp3" loop controls="true" poster="../../image/banner/img1.png" name="赤伶" author="周宇哲"></audio>
+<!-- <audio id="1" src="../../image/赤伶.mp3" loop controls="true" poster="../../image/banner/img1.png" name="赤伶" author="周宇哲"></audio> -->
+<canvas canvas-id="aa" type="2d" style="width:400rpx;height:400rpx;background:pink;">  </canvas>
+
 
 
 
