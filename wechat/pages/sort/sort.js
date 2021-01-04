@@ -1,20 +1,50 @@
 // pages/sort/sort.js
+import $$ from "../../utils/apiConfig"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    leftList:[],
+    rightList:[],
+    name:''
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      name:options.info
+    })
+    console.log(options)
+    this.getdata();
+    this.sortdata(options.info)
   },
-
+  choose(e){
+    this.setData({
+      name:e.currentTarget.dataset.name
+    })
+    if(e.currentTarget.dataset.name){
+      this.sortdata(e.currentTarget.dataset.name)
+    }
+  },
+  sortdata(val){
+    $$.promiseGet("/goods/sortHas",{sousuo:val}).then(res=>{
+      console.log(res);
+      this.setData({
+        rightList:res.data.data
+      })
+    })
+  },
+  getdata(){
+    $$.promiseGet("/goods/sortOne",{}).then(res=>{
+      console.log(res);
+      this.setData({
+        leftList:res.data.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

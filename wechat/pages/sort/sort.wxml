@@ -1,3 +1,23 @@
-<!--pages/sort/sort.wxml-->
-<text>pages/sort/sort.wxml</text>
-<navigator url="../page/page" open-type="navigateBack">回去[reLaunch]</navigator>
+<view class="topbox">
+  <input type="text" class="oIput"/>
+</view>
+<view class="box">
+  <view class="scrollLeft">
+    <scroll-view scroll-y="true" class="leftBox">
+      <view class="itemLeft {{ name===item.name ? 'leftActive' :'' }}" wx:for="{{leftList}}" data-name="{{item.name}}" bindtap="choose">
+        <view>{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="scrollRight">
+    <scroll-view scroll-y="true" class="RightBox">
+        <view class="rb">
+          <view class="itemRight" wx:for="{{rightList}}" wx:for-item="sort">
+          <image src="{{sort.img}}"></image>
+          <view class="title">{{sort.name}}</view>
+        </view>
+      </view>
+      
+    </scroll-view>
+  </view>
+</view>

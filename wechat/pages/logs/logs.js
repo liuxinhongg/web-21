@@ -1,5 +1,6 @@
 //logs.js
 const app = getApp()
+import $$ from "../../utils/apiConfig"
 Page({
   data: {
     longitude:'',
@@ -37,6 +38,9 @@ Page({
           bannerlist:res.data.data
         })
       }
+    })
+    $$.promiseGet("/goods/bannerOne",{}).then(res=>{
+      console.log(res)
     })
     // console.log(options);
     let that = this;

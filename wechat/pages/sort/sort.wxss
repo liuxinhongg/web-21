@@ -1,1 +1,67 @@
-/* pages/sort/sort.wxss */
+.oIput{
+  width: 600rpx;
+  height: 80rpx;
+  background-color: white;
+  margin: 10rpx auto;
+}
+.topbox{
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+  background-color: #efefef;
+}
+.box{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  background-color: red;
+}
+.leftBox{
+  width: 200rpx;
+  height: 100%;
+  background-color: aqua;
+}
+.itemLeft{
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-size: 30rpx;
+  background-color: #F0F0F0;
+  border-left: 6rpx solid #F0F0F0;
+
+}
+.leftActive{
+  background-color: #fff;
+  border-left: 6rpx solid #EB5E5E;
+}
+.scrollRight{
+  flex: 1;
+  height: 100%;
+  background-color: yellowgreen;
+  
+}
+.RightBox{
+  width: 100%;
+  height: 100%;
+}
+.rb{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.itemRight{
+  width: 150rpx;
+  height: 250rpx;
+}
+.itemRight image{
+  width: 150rpx;
+  height: 200rpx;
+}
+.itemRight .title{
+  text-align: center;
+  line-height: 50rpx;
+}

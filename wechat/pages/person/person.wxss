@@ -4,7 +4,7 @@
   font-size: 40rpx;
   font-weight: bold;
   text-indent: 0.5rem;
-  color: red;
+  /* color: red; */
 }
 .scroll-view_H{
   white-space: nowrap;
@@ -23,6 +23,8 @@
   margin-left:20rpx;
   height: 150rpx;
   text-align: center;
+  color: red;
+
 }
 .itemBox image{
   width: 100%;
@@ -31,5 +33,7 @@
 .title{
   line-height: 50rpx;
   font-weight: bold;
-  color: red;
+}
+.active{
+  color: green
 }
