@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<hello-world></hello-world>
+			<hello-world></hello-world>
+			<hello-world></hello-world>
+			<hello-world></hello-world>
+			{{news}}
+		</div>
+		<template id="box">
+			<div>
+				{{msg}}
+				<h1 @click="change">{{msg}}</h1>
+				<ul>
+					<li v-for="(item,index) in pome" :key="index">{{item.title}}</li>
+				</ul>
+			</div>
+		</template>
+		<script type="text/javascript">
+			Vue.component('hello-world',{
+				template:'#box',
+				data(){
+					return {
+						msg:'你好~月亮~',
+						pome:[
+							{title:'鹅鹅鹅',id:1},
+							{title:'曲项向天歌',id:2},
+							{title:'白毛浮绿水',id:3},
+							{title:'红掌拨清波',id:4}
+						]
+					}
+				},
+				methods:{
+					change(){
+						this.msg = "你好！星星"
+					}
+				}
+			})
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					news:"你好！太阳~"
+				}
+			})
+		</script>
+	</body>
+</html>

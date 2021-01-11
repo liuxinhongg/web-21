@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<wrap></wrap>
+		</div>
+		<div id="web">
+			<wrap></wrap>
+		</div>
+		<script type="text/javascript">
+			
+			Vue.component('wrap',{
+				template:` <div> <h1>我是全局组件的模板</h1> </div> `
+			})
+			new Vue({
+				el:"#app",
+				data:{}
+			})
+			new Vue({
+				el:"#web",
+				data:{}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>上岛咖啡黑客大赛</h1>
+			<hello>
+				<div>
+					<h2><font color="red">我是组件里面的内容</font></h2>
+				</div>
+			</hello>
+			<h1>上岛咖啡黑客大赛</h1>
+		</div>
+		<template id="box">
+			<div>
+				<h3>111我是模板的内容</h3>
+				<slot></slot>
+				<h3>2222我是模板的内容</h3>
+				<h3>333我是模板的内容</h3>
+			</div>
+		</template>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:"#app",
+				data:{},
+				components:{
+					'hello':{
+						template:'#box'
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

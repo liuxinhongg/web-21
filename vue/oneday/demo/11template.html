@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{msg}}
+			<h1>{{msg}}</h1>
+		</div>
+		<!-- <script type="x-template" id="box">
+			<div>
+				hello:{{msg}}
+			</div>
+		</script> -->
+		<template id="box">
+			<div>
+				<h1>我是模板内容</h1>
+				<h1>我是模板内容</h1>
+				<h1>我是模板内容</h1>
+				<h1>{{msg}}</h1>
+			</div>
+		</template>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					msg:"卡还是地方看啥的就开始"
+				},
+				// template:"#box",
+				// template:` <div> <h1>{{msg}}</h1></div>`
+				template:'#box'
+			})
+		</script>
+	</body>
+</html>

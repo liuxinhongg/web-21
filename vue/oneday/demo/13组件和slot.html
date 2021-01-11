@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<hello>
+				<h2 slot="one">我要替换slot第一个位置</h2>
+				<h3 slot="two">我要替换slot第二个位置</h3>
+				<h3 slot="three">我要替换slot第三个位置</h3>
+				<p>上岛咖啡哈萨克东方航空收到回复</p>
+			</hello>
+		</div>
+		<template id="box">
+			<div>
+				<slot name="one">我是第一个位置</slot>
+				<slot name="two">我是第二个位置</slot>
+				<slot name="three">我是第三个位置</slot>
+				<p>水陆大会妇科了收到回复</p>
+			</div>
+		</template>
+		<script type="text/javascript">
+			Vue.component('hello',{
+				template:"#box"
+			})
+			new Vue({
+				el:"#app",
+				data:{},
+			})
+		</script>
+	</body>
+</html>
