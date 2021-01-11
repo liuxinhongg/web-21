@@ -5,6 +5,7 @@
 <view>{{msg}}</view>
 <view>{{msg}}</view>
 <!-- <view class="box"></view> -->
+<input type="text" class="oIput" placeholder="请输入用户名" style="height:50rpx;width:300rpx;margin:10rpx auto;"/>
 <view>
   <view wx:for="{{pome}}" wx:key="index">
     <text>{{index}}</text>

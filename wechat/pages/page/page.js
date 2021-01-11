@@ -61,7 +61,17 @@ Page({
    */
   onLoad(options) {
     // console.log(app.globalData.username)
-    
+    wx.requestPayment({
+      nonceStr: 'nonceStr',
+      package: 'package',
+      paySign: 'paySign',
+      timeStamp: 'timeStamp',
+    })
+    wx.chooseAddress({
+      success: (result) => {
+        console.log(result)
+      },
+    })
   },
 
   /**

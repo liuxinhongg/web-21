@@ -5,7 +5,7 @@ let pool = mysql.createPool({
 	user:'root',
 	password:'root',
 	port:'3306',
-	database:'first'
+	database:'student'
 })
 //传出
 exports.query = function (sql,arr,callback) {

@@ -1,5 +1,5 @@
 // const apiConfig = 'http://localhost:3000';
-const apiConfig = 'http://192.168.1.111:3000';
+const apiConfig = 'http://192.168.31.67:3000';
 // JS
 let ajax = {
   get(url,data,success){

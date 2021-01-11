@@ -13,13 +13,38 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  
   onLoad: function (options) {
+   
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
     this.setData({
       name:options.info
     })
     console.log(options)
     this.getdata();
-    this.sortdata(options.info)
+    this.sortdata(options.info);
+   
+    if(this.data.leftList && this.data.rightList){
+      console.log(2)
+        wx.hideToast()
+    }else{
+      console.log(1)
+      wx.showToast({
+        title: '加载中...',
+        icon: 'loading',
+        duration: 5000
+      })
+    }
   },
   choose(e){
     this.setData({
@@ -32,9 +57,12 @@ Page({
   sortdata(val){
     $$.promiseGet("/goods/sortHas",{sousuo:val}).then(res=>{
       console.log(res);
-      this.setData({
-        rightList:res.data.data
-      })
+      setTimeout(()=>{
+         this.setData({
+          rightList:res.data.data
+        })
+      },2000)
+     
     })
   },
   getdata(){

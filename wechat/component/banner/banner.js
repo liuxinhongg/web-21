@@ -1,0 +1,23 @@
+Component({
+  properties:{
+    imgList:{
+      type:Array,
+      value:[],
+      observer:{
+        imgList:res=>{
+          this.setData({
+            imgList:res
+          })
+        }
+      }
+    },
+    url:{
+      type:String,
+      value:''
+    },
+    bannerHeight:{
+      type:String,
+      value:''
+    }
+  }
+})

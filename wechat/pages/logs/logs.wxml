@@ -1,12 +1,17 @@
+
+<button class="mini-btn" type="primary" size="mini" bindtap="add">按钮</button>
+
 <view class="banner">
-  <swiper indicator-dots="true" autoplay="autoplay" interval="1000" duration="500">
+  <!-- <swiper indicator-dots="true" autoplay="autoplay" interval="1000" duration="500">
     <block wx:for="{{bannerlist}}" wx:for-item="banner">
       <swiper-item>
         <image src="{{banner.img}}"></image>
       </swiper-item>
     </block>
-  </swiper>
+  </swiper> -->
+  <banner-img bannerHeight="300rpx" imgList="{{bannerlist}}" url="img"></banner-img>
 </view>
+<navigator url="../sort/sort">去分类页面</navigator>
 <!-- <view class="page-section-spacing">
   <scroll-view scroll-y="true" style="height: 700rpx;background-color: #efefee;">
     <view id="demo1" class="scroll-view-item demo-text-1">1111</view>

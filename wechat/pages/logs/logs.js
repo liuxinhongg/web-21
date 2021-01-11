@@ -19,9 +19,47 @@ Page({
       msg: '我是一个模板',
       time: '2016-09-15'
     },
-    bannerlist:[]
+    bannerlist:[],
+    cartdata:[]
+  },
+  add(){
+    let datalist = this.data.cartdata || [];
+    let obj = {
+      name:'zhangsan',
+      num:1,
+      status:false,
+      number:11
+    }
+    datalist.push(obj)
+    wx.setStorage({
+      data: datalist,
+      key: 'cart',
+    })
   },
   onLoad: function (options) {
+    wx.getStorage({
+      key: 'cart',
+      success:res=>{
+        console.log(res)
+        this.setData({
+          cartdata:res.data
+        })
+      }
+    })
+    wx.setTabBarBadge({
+      index: 1,
+      text: '111'
+    })
+    /*
+    wx.setTabBarStyle({
+      color: '#FF0000',
+      selectedColor: '#00FF00',
+      backgroundColor: '#f99',
+      borderStyle: 'white'
+    })*/
+
+
+
     wx.getStorage({
       key: 'info',
       success:(res)=>{
@@ -30,7 +68,7 @@ Page({
     })
     console.log(app.globalData.name)
     wx.request({
-      url: 'http://192.168.1.103:3000/goods/bannerOne',
+      url: 'http://192.168.31.67:3000/goods/bannerOne',
       method:'GET',
       success:res=>{
         console.log(res);

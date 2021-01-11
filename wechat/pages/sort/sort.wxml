@@ -1,5 +1,5 @@
 <view class="topbox">
-  <input type="text" class="oIput"/>
+  <input type="text" class="oIput" placeholder="请输入用户名"/>
 </view>
 <view class="box">
   <view class="scrollLeft">
@@ -20,4 +20,5 @@
       
     </scroll-view>
   </view>
+  <button class="mini-btn" type="primary" size="mini" bindtap="add">按钮</button>
 </view>

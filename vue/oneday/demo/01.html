@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{msg}}</h1>
+		</div>
+		<script type="text/javascript">
+			/* Vue 的核心库只关注视图层
+			vue 的核心vm: mvvm=module+view+viewModule */
+			// el=element
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					msg:"今天周一"
+				}
+			})
+		</script>
+	</body>
+</html>

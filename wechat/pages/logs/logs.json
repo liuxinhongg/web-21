@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "日志",
   "navigationBarBackgroundColor":"#00f",
-  "usingComponents": {}
+  "usingComponents": {
+    "banner-img": "../../component/banner/banner"
+  }
 }
