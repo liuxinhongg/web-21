@@ -4,22 +4,26 @@
 		<meta charset="utf-8">
 		<title></title>
 		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			[v-cloak]{
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app">
-			<h2 v-if="isSeen">{{news}}</h2>
-			<h2 v-else>我不是杨丽</h2>
-			<h1 v-if="num > 10">比10大</h1>
-			<h1 v-else-if="num<10">比10小</h1>
-			<h1 v-else>等于10</h1>
+			<p v-pre>{{今天周一}}</p>
+			<p v-cloak>{{num}}</p>
+			<p v-once>{{shuzi}}</p>
+			<input v-model="shuzi" />
+			{{shuzi}}
 		</div>
 		<script type="text/javascript">
 			let vm = new Vue({
 				el:"#app",
 				data:{
-					news:"你好！杨利",
-					isSeen:true,
-					num:1
+					num:'阿萨德撒发的',
+					shuzi:'我是数字'
 				}
 			})
 		</script>

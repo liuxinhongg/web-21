@@ -7,19 +7,15 @@
 	</head>
 	<body>
 		<div id="app">
-			<h2 v-if="isSeen">{{news}}</h2>
-			<h2 v-else>我不是杨丽</h2>
-			<h1 v-if="num > 10">比10大</h1>
-			<h1 v-else-if="num<10">比10小</h1>
-			<h1 v-else>等于10</h1>
+			<!-- v-model = value -->
+			<input type="text"  v-model="Oinput"/>
+			<h1>{{Oinput}}</h1>
 		</div>
 		<script type="text/javascript">
 			let vm = new Vue({
-				el:"#app",
+				el:'#app',
 				data:{
-					news:"你好！杨利",
-					isSeen:true,
-					num:1
+					Oinput:'123'
 				}
 			})
 		</script>
