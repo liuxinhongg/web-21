@@ -10,6 +10,7 @@
 			<input type="button" name="" id="" value="加一" v-on:click="jia()"/>
 			{{num}}
 			<input type="button" name="" id="" value="减一" @click="jian()"/>
+			<input type="button" name="" id="" value="键盘" @keyup="btn($event)"/>
 		</div>
 		<script type="text/javascript">
 			let vm = new Vue({
@@ -24,6 +25,9 @@
 					},
 					jian(){
 						this.num--
+					},
+					btn(e){
+						console.log(e)
 					}
 				}
 			})

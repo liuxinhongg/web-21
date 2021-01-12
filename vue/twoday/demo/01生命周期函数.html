@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" name="" id="" value="更新" onclick="change()"/>
+			<input type="button" name="" id="" value="销毁" onclick="destroy()"/>
+			<h1>{{name}}</h1>
+		</div>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					name:'方绳智'
+				},
+				methods:{},
+				beforeCreate() {
+					alert("实例创建前~")
+				},
+				created() {
+					alert("实例创建完成~")
+				},
+				beforeMount() {
+					alert("实例挂载前~")
+				},
+				mounted() {
+					alert("实例挂载完成~")
+				},
+				beforeUpdate() {
+					alert("实例更新前~")
+				},
+				updated() {
+					alert("实例更新完成~")
+				},
+				beforeDestroy() {
+					alert("实例销毁前~")
+				},
+				destroyed() {
+					alert("实例销毁完成~")
+				}
+			})
+			function change(){
+				vm.name = "杨利"
+			}
+			function destroy(){
+				vm.$destroy()
+			}
+		</script>
+	</body>
+</html>

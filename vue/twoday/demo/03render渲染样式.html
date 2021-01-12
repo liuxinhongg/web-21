@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.oul{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <h1 class="" style="" aa="bb">shdkflhsdlf</h1> -->
+		</div>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:"#app",
+				data:{},
+				render(createElement) {
+					// createElement(元素标签,标签内容)
+					return createElement('ul',{
+						// 添加class样式
+						class:{
+							oul:true
+						},
+						// 添加行内样式
+						style:{
+							fontSize:'30px',
+							color:'#fff',
+							listStyle:'none'
+						},
+						// 自定义属性
+						attrs:{
+							sun:'taiyang',
+							moon:'yueliang'
+						}
+					},[
+						createElement("li","你好！"),
+						createElement("li","你好！"),
+						createElement("li","你好！"),
+						createElement("li","你好！"),
+					]) 
+				}
+			})
+		</script>
+	</body>
+</html>

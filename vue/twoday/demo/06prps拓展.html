@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<hello-world :num="shuzi" prop-a="zhangsan" prop-b="123" :obj="{aa:123}" :number=10></hello-world>
+		</div>
+		<template id="box">
+			<div>
+				<h1>{{num}}</h1>
+				<h1>{{propA}}</h1>
+				<h1>{{propB}}</h1>
+				<h1>{{obj}}</h1>
+				<h1>{{number}}</h1>
+				<h1>{{propE}}</h1>
+			</div>
+		</template>
+		<script type="text/javascript">
+			Vue.component('hello-world',{
+				template:'#box',
+				props:{
+					num:Number,
+					propA:String,
+					propB:[String,Number],
+					obj:{
+						type:Object,
+						required:true
+					},
+					number:{
+						type:Number,
+						default:100
+					},
+					propE: {
+					  type: Object,
+					  // 对象或数组默认值必须从一个工厂函数获取
+					  default: function () {
+						return { message: 'hello' }
+					  }
+					},
+				}
+			})
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					shuzi:12
+				}
+			})
+		</script>
+	</body>
+</html>

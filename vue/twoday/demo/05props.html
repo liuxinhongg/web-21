@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<hello title="vue" number="123" author="yangli" vue-obj="{a:123}"></hello>
+		</div>
+		<template id="box">
+			<div>
+				<h1>{{title}}</h1>
+				<h1>{{number}}</h1>
+				<h1>{{author}}</h1>
+				<h1>{{vueObj}}</h1>
+			</div>
+		</template>
+		<script type="text/javascript">
+			Vue.component('hello',{
+				template:'#box',
+				props:['title','number','author','vueObj']
+			})
+			let vm = new Vue({
+				el:"#app",
+				data:{}
+			})
+		</script>
+	</body>
+</html>
