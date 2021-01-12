@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1> {{ dataTime | data }} </h1>
+		</div>
+		<script type="text/javascript">
+			Vue.filter('data',function(val){
+				var oTime = new Date();
+				return oTime.getFullYear() + '-' + (oTime.getMonth()+1) + "星期"+oTime.getDay()
+			})
+			let vm = new Vue({
+				el:"#app",
+				data:{
+					dataTime:Date.now()
+				},
+				created() {
+					let tt = Date.now();
+					console.log(tt)
+				}
+			})
+		</script>
+	</body>
+</html>
