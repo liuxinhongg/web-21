@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import work from '@/components/work'
 import home from '@/components/home'
+import page from "@/views/page"
 const user = {
   template:`<div> <h1>我是父组件user</h1><router-view/> </div>`
 }
@@ -12,25 +13,49 @@ const profile = {
 const posts = {
   template:`<div> <h1>我是子组件posts</h1> </div>`
 }
+const notFound = {
+  template:`<div><h1>404页面未找到</h1></div>`
+}
 Vue.use(Router)
 
-export default new Router({
+
+const router =  new Router({
   mode:'history',
   linkActiveClass:"nav",
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect:'/work'
+      // name: 'HelloWorld',
+      // component: HelloWorld
     },{
       path:'/work',
       name:'work',
       component:work
     },
     {
+      path:'/page',
+      name:'page',
+      component:page
+    },
+    {
       path:'/home/:id',
       name:'home',
       component:home
+    },
+    {
+      path:'*',
+      component:notFound,
+      redirect(to){
+        console.log(to);
+        if(to.path === '/aaa'){
+          return '/work'
+        }else if(to.path === '/bbb'){
+          return '/home/123'
+        }else{
+          return '/'
+        }
+      }
     },
     {
       path:'/user/:id',
@@ -43,7 +68,7 @@ export default new Router({
           component:profile
         },
         {
-          path:'posts',
+          path:'/posts',
           name:'posts',
           component:posts
         }
@@ -51,3 +76,19 @@ export default new Router({
     }
   ]
 })
+// login
+/*
+router.beforeEach((to,from,next)=>{
+  // console.log(to)
+  if(to.path ==="/login"){
+    next()
+  }else{
+    let token = localStorage.getItem("token");
+    if(token===null || token===""){
+      next("/login")
+    }else{
+      next()
+    }
+  }
+})*/
+export default router

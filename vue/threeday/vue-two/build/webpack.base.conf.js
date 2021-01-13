@@ -37,6 +37,11 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+        //需要你手动添加，相当于是编译识别sass! 
+          test: /\.scss$/,
+          loaders: ["style", "css", "sass"]		
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
