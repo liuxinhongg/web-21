@@ -5,6 +5,7 @@ import work from '@/components/work'
 import home from '@/components/home'
 import login from '@/components/login'
 import page from "@/views/page"
+import count from "@/views/count"
 const user = {
   template:`<div> <h1>我是父组件user</h1><router-view/> </div>`
 }
@@ -38,6 +39,11 @@ const router =  new Router({
       path:'/login',
       name:'login',
       component:login
+    },
+    {
+      path:'/count',
+      name:'count',
+      component:count
     },
     {
       path:'/page',
