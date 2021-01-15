@@ -17,6 +17,13 @@ module.exports = {
         pathRewrite:{
           '^/api':'http://192.168.31.172:3000'
         }
+      },
+      '/nodeapi':{
+        target:'http://192.168.31.67:3030',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/nodeapi':'http://192.168.31.67:3030'
+        }
       }
     },
 

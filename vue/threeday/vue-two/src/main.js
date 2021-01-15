@@ -14,6 +14,15 @@ Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 /* eslint-disable no-new */
+// axios 拦截请求 Bearer token
+axios.interceptors.request.use(config=>{
+  console.log(config)
+  if(store.state.token){
+    // console.log(11)
+    config.headers['Authorization'] = `Bearer ${store.state.token}`
+  }
+  return config;
+})
 new Vue({
   el: '#app',
   router,

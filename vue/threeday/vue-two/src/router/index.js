@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import work from '@/components/work'
 import home from '@/components/home'
 import login from '@/components/login'
+import userinfo from '@/components/userinfo'
+import register from '@/components/register'
 import page from "@/views/page"
 import count from "@/views/count"
 const user = {
@@ -36,6 +38,15 @@ const router =  new Router({
       component:work
     },
     {
+      path:'/userinfo',
+      name:'userinfo',
+      component:userinfo
+    },
+    {
+      path:'/register',
+      name:'register',
+      component:register
+    },{
       path:'/login',
       name:'login',
       component:login

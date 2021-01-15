@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import Cookie from 'js-cookie'
     export default {
         data() {
             return {
@@ -26,8 +27,16 @@
         },
         methods:{
             login(){
-                this.$http.post("/api/login",this.loginform).then(res=>{
-                    console.log(res)
+                this.$http.post("/nodeapi/page/login",this.loginform).then(res=>{
+                    console.log(res);
+                    if(res.data.code===0){
+                        Cookie.set("username",this.loginform.username)
+                        Cookie.set('token',res.data.token);
+                        this.$store.commit('setToken',res.data.token);
+                        this.$store.commit('changeSignIn',1);
+                        this.$message.success("登录成功");
+
+                    }
                 })
             }
         }
