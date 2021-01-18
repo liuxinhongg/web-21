@@ -8,6 +8,7 @@ import userinfo from '@/components/userinfo'
 import register from '@/components/register'
 import page from "@/views/page"
 import count from "@/views/count"
+import echart from "@/views/echart"
 const user = {
   template:`<div> <h1>我是父组件user</h1><router-view/> </div>`
 }
@@ -36,6 +37,11 @@ const router =  new Router({
       path:'/work',
       name:'work',
       component:work
+    },
+    {
+      path:'/echart',
+      name:'echart',
+      component:echart
     },
     {
       path:'/userinfo',

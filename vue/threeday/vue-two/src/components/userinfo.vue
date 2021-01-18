@@ -1,5 +1,7 @@
 <template>
   <div class="user">
+    <span>昵称：</span>
+    <el-input type="text" v-model="nick"></el-input>
     <el-upload
       class="avatar-uploader"
       action="/nodeapi/page/upload"
@@ -11,6 +13,7 @@
       <img v-if="imageUrl" :src="imageUrl" class="avatar" />
       <i v-else class="el-icon-plus avatar-uploader-icon"></i>
     </el-upload>
+    <el-button type="success" @click="gengxin">更新用户信息</el-button>
   </div>
 </template>
 
@@ -24,17 +27,19 @@ export default {
     };
   },
   methods: {
-    handleAvatarSuccess(res, file) {
-        console.log(res)
-        //   this.imageUrl = URL.createObjectURL(file.raw);
-        this.imageUrl = res.data
+    gengxin(){
         this.$http.post('/nodeapi/page/updateuser',{
             username:Cookie.get("username"),
-            head_img:res.data,
+            head_img:this.imageUrl,
             nick:this.nick
         }).then(res=>{
             console.log(res)
         })
+    },
+    handleAvatarSuccess(res, file) {
+        console.log(res)
+        //   this.imageUrl = URL.createObjectURL(file.raw);
+        this.imageUrl = res.data
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
@@ -48,14 +53,17 @@ export default {
       return isJPG && isLt2M;
     },
   },
-  mounted() {
+  created() {
     this.$http
       .get("/nodeapi/page/userinfo", {
         params: { username: Cookie.get("username") },
       })
       .then((res) => {
         console.log(res);
-        this.nick = res.data.nick
+        this.nick = res.data.nick;
+        if(res.data.head_img!==''||res.data.head_img!==null){
+          this.imageUrl = res.data.head_img 
+        }
       });
   },
 };
