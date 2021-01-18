@@ -9,6 +9,7 @@ import register from '@/components/register'
 import page from "@/views/page"
 import count from "@/views/count"
 import echart from "@/views/echart"
+import fenye from "@/views/fenye"
 const user = {
   template:`<div> <h1>我是父组件user</h1><router-view/> </div>`
 }
@@ -42,6 +43,11 @@ const router =  new Router({
       path:'/echart',
       name:'echart',
       component:echart
+    },
+    {
+      path:'/fenye',
+      name:'fenye',
+      component:fenye
     },
     {
       path:'/userinfo',

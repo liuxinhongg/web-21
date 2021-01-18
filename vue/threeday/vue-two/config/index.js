@@ -24,7 +24,14 @@ module.exports = {
         pathRewrite:{
           '^/nodeapi':'http://192.168.31.67:3030'
         }
-      }
+      },
+      '/showapi':{
+        target:'http://route.showapi.com',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/showapi':'http://route.showapi.com'
+        }
+      },
     },
 
     // Various Dev Server settings
